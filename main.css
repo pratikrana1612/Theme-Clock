@@ -4,6 +4,7 @@
 {
     box-sizing: border-box;
     font-family: 'Heebo', sans-serif;
+    transition: background-color 0.5s ease-in;
 }
 
 body{
@@ -26,10 +27,11 @@ body{
     border-radius:8px;
     font-size: 1.1rem;
     margin:1rem;
+    border:none;
 }
 .clock
 {
-    background-color: lightblue;
+    /* background-color: lightblue; */
     width:400px;
     height:400px;
     border-radius:50%;
@@ -57,12 +59,13 @@ span{
     top:51%;
     left:51%;
     background-color: #e74c3c;
-    height:3px;
-    width:130px;
+    height:130px;
+    width:3px;
+    transform: translate(0,-100%) rotate(0);
     border-top-left-radius: 20px;
-    transform:rotate(deg);
-    transform-origin: left;
+    transform-origin: bottom;
     z-index:3;
+    transition: 0.5s ease-in;
     /* z-index:-1;  */
 }
 .hour_hand
@@ -70,11 +73,11 @@ span{
     position:absolute;
     top:51%;
     left:51%;
-    transform:rotate(90deg);
-    transform-origin: left;
+    transform-origin: bottom;
     background-color: black;
-    height:3px;
-    width:100px; 
+    height:130px;
+    width:3px;
+    transform: translate(0,-100%) rotate(0deg);
     z-index:3;
 }
 .minute_hand
@@ -83,10 +86,11 @@ span{
     top:51%;
     left:51%;
     transform:rotate(50deg);
-    transform-origin: left;
+    transform-origin: bottom;
     background-color: black;
-    height:3px;
-    width:130px; 
+    height:130px;
+    width:3px;
+    transform: translate(0,-100%) rotate(0deg);
 }
 .time_bar
 {
@@ -105,7 +109,7 @@ span{
 {
     text-align: center;
 }
-span{
+.date{
     background-color: black;
     color:white;
     border-radius:50%;
@@ -113,4 +117,14 @@ span{
     width:25px;
     display: inline-block;
     /* height:0px; */
+}
+.light_mode
+{
+    background-color: white;
+    color:black;
+}
+.dark_mode
+{
+    background-color: black;
+    color:white;
 }
