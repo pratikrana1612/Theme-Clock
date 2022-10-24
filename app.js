@@ -13,7 +13,7 @@ let hour_hand_rotate=0;
 function setTime()
 {
     const time = new Date();
-    timeShow.textContent = `${time.getHours()} : ${time.getMinutes()} ${time.getHours<12?'AM':'PM'}`;
+    timeShow.textContent = `${time.getHours()<9?'0'+time.getHours():time.getHours()} : ${time.getMinutes()<9?'0'+time.getMinutes():time.getMinutes()} ${time.getHours<12?'AM':'PM'}`;
     const weekday = time.toLocaleDateString("en-Us",{weekday:'long'}).toUpperCase();
     const month = time.toLocaleDateString("en-Us",{month:'short'}).toUpperCase();
     dateShow.textContent = `${weekday} , ${month} `;
@@ -50,7 +50,7 @@ function minuteHandHandler()
     }
     minute_hand_rotate+=6;
     minute_hand.style.transform = `translate(0,-100%) rotate(${minute_hand_rotate}deg)`;
-    logic(minute_hand_rotate,minute_hand,hourHandHandler);
+    // logic(minute_hand_rotate,minute_hand,hourHandHandler);
 }
 function hourHandHandler()
 {

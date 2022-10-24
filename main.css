@@ -75,7 +75,7 @@ span{
     left:51%;
     transform-origin: bottom;
     background-color: black;
-    height:130px;
+    height:100px;
     width:3px;
     transform: translate(0,-100%) rotate(0deg);
     z-index:3;
