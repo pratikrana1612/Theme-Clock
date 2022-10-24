@@ -13,7 +13,9 @@ let hour_hand_rotate=0;
 function setTime()
 {
     const time = new Date();
-    timeShow.textContent = `${time.getHours()<9?'0'+time.getHours():time.getHours()} : ${time.getMinutes()<9?'0'+time.getMinutes():time.getMinutes()} ${time.getHours<12?'AM':'PM'}`;
+    const hour = (time.getHours()%12)||12;
+    const minutes = time.getMinutes();
+    timeShow.textContent = `${hour<9?'0'+hour:hour} : ${minutes<9?'0'+minutes:minutes} ${time.getHours<12?'AM':'PM'}`;
     const weekday = time.toLocaleDateString("en-Us",{weekday:'long'}).toUpperCase();
     const month = time.toLocaleDateString("en-Us",{month:'short'}).toUpperCase();
     dateShow.textContent = `${weekday} , ${month} `;
