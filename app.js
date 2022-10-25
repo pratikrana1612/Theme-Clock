@@ -60,6 +60,7 @@ function minuteHandHandler() {
     // logic(minute_hand_rotate,minute_hand,hourHandHandler);
 }
 function hourHandHandler() {
+    const time = new Date();
     if (hour_hand_rotate == 360) {
         hour_hand_rotate = 0;
     }
