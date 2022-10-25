@@ -150,7 +150,7 @@ span{
 {
     color:#e74c3c;
 }
-@media(max-width:900px)
+@media only screen and (max-width:900px)
 {
     body
     {
@@ -163,7 +163,7 @@ span{
         font-size:2rem;
     }
 }
-@media(max-width:40rem)
+@media only screen and (max-width:47rem)
 {
     body
     {
