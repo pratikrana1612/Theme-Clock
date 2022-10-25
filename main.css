@@ -165,18 +165,11 @@ span{
 }
 @media only screen and (max-width:47rem)
 {
-    body
-    {
-        padding:1rem 0;
-        height: auto;
-        width:100vw;
-    }
     .start_text,
     .end_text
     {
         position: static;
         text-align: center;
-        font-size: 1.3rem;
         width:auto;
         height:auto;    
         padding:0;
