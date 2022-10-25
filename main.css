@@ -16,6 +16,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    overflow-x: hidden;
     /* background-color: black;
     color:white; */
 }
@@ -166,7 +167,9 @@ span{
 {
     body
     {
-        padding:1rem;
+        padding:1rem 0;
+        height: auto;
+        width:100vw;
     }
     .start_text,
     .end_text
