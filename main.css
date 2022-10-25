@@ -151,6 +151,10 @@ span{
 }
 @media(max-width:900px)
 {
+    body
+    {
+        padding:2rem;
+    }
     .start_text,
     .end_text
     {
@@ -160,12 +164,16 @@ span{
 }
 @media(max-width:40rem)
 {
+    body
+    {
+        padding:1rem;
+    }
     .start_text,
     .end_text
     {
         position: static;
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.3rem;
         width:auto;
         height:auto;    
         padding:0;
